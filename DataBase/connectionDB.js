@@ -19,7 +19,7 @@ const connectionDB = async () =>
             
         );
 
-        mongoose.set('useFindAndModify', false);
+        mongoose.set( 'useFindAndModify', false );
 
         console.log( "DB Online" );
 

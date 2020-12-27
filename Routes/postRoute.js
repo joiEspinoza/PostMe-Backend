@@ -1,8 +1,8 @@
 const { Router } = require( "express" );
 const router = Router();
 const { check } = require("express-validator");
-const { registerPost, getPost, deletePost, updateLike } = require("../Controls/postControl.js");
 const { ValidatorMidd } = require("../Middleware/validadorDatos.js");
+const { registerPost, getPost, deletePost, updateLike } = require("../Controls/postControl.js");
 
 //////<<<<<------------------------------------------------``
 
