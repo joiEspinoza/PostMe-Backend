@@ -9,7 +9,9 @@ const userSchema = Schema(
 
         email : { type : String, required : true, unique : true },
         
-        password : { type : String, required : true }
+        password : { type : String, required : true },
+
+        postsLiked : { type : Array, require : true }
 
     }
 

@@ -2,7 +2,7 @@ const { Router } = require( "express" );
 const router = Router();
 const { check } = require("express-validator");
 const { ValidatorMidd } = require("../Middleware/validadorDatos.js");
-const { Login, Register } = require("../Controls/authControl.js");
+const { Login, Register, updateLiked } = require("../Controls/authControl.js");
 
 //////<<<<<------------------------------------------------``
 
@@ -30,6 +30,9 @@ router.post(
     ] 
     , Register 
 );
+
+
+router.put( "/", [], updateLiked );
 
 //////---------------------------------------------->>>>>
 
