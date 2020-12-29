@@ -14,6 +14,8 @@ const postSchema = Schema(
 
         datePost : { type : String, required : true },
 
+        categoryPost : { type : String, require : true },
+
         user : { type : Schema.Types.ObjectId, ref : "User", required : true }
 
     }
