@@ -24,4 +24,6 @@ serverApp.use( "/api/auth", require( "./Routes/authRoute" ) );
 
 serverApp.use( "/api/post", require( "./Routes/postRoute" ) );
 
+serverApp.use( "/api/category", require( "./Routes/categoryRoute" ) );
+
 //------------------------------------------------------------------------// 
