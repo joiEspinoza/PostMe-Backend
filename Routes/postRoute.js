@@ -2,7 +2,7 @@ const { Router } = require( "express" );
 const router = Router();
 const { check } = require("express-validator");
 const { ValidatorMidd } = require("../Middleware/validadorDatos.js");
-const { registerPost, getPost, deletePost, updateLike } = require("../Controls/postControl.js");
+const { registerPost, getPost, deletePost, updateLike, deletePosts } = require("../Controls/postControl.js");
 
 //////<<<<<------------------------------------------------``
 
@@ -22,6 +22,8 @@ router.post(
 router.get( "/", [], getPost );
 
 router.put( "/",[], updateLike );
+
+router.delete( "/delposts", [], deletePosts );
 
 router.delete( "/:id", [], deletePost );
 

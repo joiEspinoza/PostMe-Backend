@@ -68,6 +68,7 @@ const updateLike = async ( request, response = response ) =>
 
 const deletePost = async ( request, response = response  ) =>
 {
+
     try 
     {
 
@@ -91,6 +92,26 @@ const deletePost = async ( request, response = response  ) =>
 };
 
 
+const deletePosts = async ( request, response = response ) =>
+{   
+
+    try 
+    {
+        const { categoryPost } = request.body;
+
+        await Post.deleteMany( { categoryPost } );
+
+        return response.status( 200 ).json( { ok : true, msg : "Delete Posts" } ); 
+    } 
+    catch( error ) 
+    {
+        console.log( error );
+        return response.status( 500 ).json( { ok : false, msg : "Please contact the administrator" } );  
+    };
+
+};
+
+
 //////---------------------------------------------->>>>>
 
-module.exports = { registerPost, getPost, updateLike, deletePost };
+module.exports = { registerPost, getPost, updateLike, deletePost, deletePosts };

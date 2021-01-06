@@ -15,7 +15,7 @@ serverApp.listen( process.env.PORT, () =>
 { console.log( `Servidor corriendo en puerto ${ process.env.PORT }` ) } );
 
 connectionDB();
-
+console.log( process );
 //------------------------------|| Rutas ||-------------------------------//
 
 serverApp.use( express.static( "./public" ) );

@@ -6,7 +6,9 @@ const categorySchema = Schema(
 
     {
         
-        category : { type : String, required : true, unique : true },
+        categoryTitle : { type : String, required : true, unique : true },
+
+        color : { type : String, required : true },
 
         user : { type : Schema.Types.ObjectId, ref : "User", required : true }
 
